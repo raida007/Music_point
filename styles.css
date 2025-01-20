@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: black; /* Changed to black */
+    color: rgba(22, 25, 22, 0.001);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white; /* Set logo text color to white for visibility */
+}
+
+header .search-bar input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+header .right-side {
+    display: flex;
+    align-items: center;
+}
+
+header .cart,
+header .user-icon {
+    margin-left: 20px;
+}
+
+header .cart span,
+header .user-icon a {
+    font-size: 16px;
+    color: white;
+    margin-right: 5px;
+}
+
+header .cart-icon,
+header .user-icon i {
+    font-size: 20px;
+    color: white;
+}
+
+header .cart:hover,
+header .user-icon:hover {
+    cursor: pointer;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #e55d00;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}

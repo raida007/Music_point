@@ -1,0 +1,90 @@
+/* General Page Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff7b54, #ff3d68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Form Container */
+.login-register-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form Title */
+.login-register-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Labels */
+.login-register-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Fields */
+.login-register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Input Focus Effect */
+.login-register-form input:focus {
+    outline: none;
+    border-color: #ff3d68;
+    box-shadow: 0 0 5px rgba(255, 61, 104, 0.5);
+}
+
+/* Login Button */
+.login-register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3d68;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-register-form button:hover {
+    background-color: #e0355c;
+}
+
+/* Toggle Register Link */
+.toggle-form {
+    margin-top: 15px;
+}
+
+.toggle-form a {
+    color: #ff3d68;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.toggle-form a:hover {
+    color: #e0355c;
+}
