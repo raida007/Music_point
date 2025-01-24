@@ -1,114 +1,187 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    background-color: #298de5; /* Light blue background */
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: black; /* Changed to black */
-    color: rgba(22, 25, 22, 0.001);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #298de5; /* Sky blue background */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: white; /* Set logo text color to white for visibility */
+    color: black; /* Black text for the title */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo */
 }
 
-header .search-bar input {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-header .right-side {
+header nav {
+    flex: 1;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
 
-header .cart,
-header .user-icon {
-    margin-left: 20px;
-}
-
-header .cart span,
-header .user-icon a {
-    font-size: 16px;
-    color: white;
-    margin-right: 5px;
-}
-
-header .cart-icon,
-header .user-icon i {
-    font-size: 20px;
-    color: white;
-}
-
-header .cart:hover,
-header .user-icon:hover {
-    cursor: pointer;
-}
-
-/* Navigation */
-nav ul {
+header nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
+    gap: 10px; /* Reduced gap to bring items closer */
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    margin-left: 20px;
+header nav ul li {
+    margin: 0;
 }
 
-nav ul li a {
-    color: black;
+header nav ul li a {
     text-decoration: none;
+    color: #333; /* Darker text */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #ff6600;
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #ff4500; /* Bright orange on hover or active */
+    color: #fff; /* White text */
+}
+
+header nav ul li a i {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px; /* Prevents content from overlapping the fixed header */
 }
 
 /* Hero Section */
 .hero {
+    padding: 50px 20px;
+    background-color: #b5c0c5; /* Sky blue background */
+    border: 5px solid #62b2d2; /* Sky blue border */
+    border-radius: 10px;
     text-align: center;
-    padding: 50px 0;
 }
 
-.hero img {
-    max-width: 100%;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #004080; /* Dark blue */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .hero button {
     padding: 10px 20px;
-    background-color: #ff6600;
-    color: white;
-    border: none;
+    background-color: #ff4500;
+    color: #fff;
+    border: 2px solid #83a3be;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .hero button:hover {
-    background-color: #e55d00;
+    background-color: #e03c00;
+    color: #fff;
+    border-color: #ff4500;
 }
 
 /* Footer */
 footer {
-    background-color: #f1f1f1;
     text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    color: #333;
+    padding: 20px;
+    background-color: #004080; /* Dark blue */
+    color: #fff; /* White text */
+    font-size: 0.9rem;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow above footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-images {
+        flex-direction: column;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }

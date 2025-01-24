@@ -28,14 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user = $result->fetch_assoc();
 
         // Verify the entered password with the hashed password in the database
+       
         if (password_verify($password, $user['password'])) {
-            echo  "<script>
-            alert('Login successful! Welcome, " . $user['fullname'] . ".');
-            window.location.href = 'index.html'; // Replace 'dashboard.php' with your target page
-          </script>";
+            session_start();
+            $_SESSION['username'] = $user['username'];
+            echo "<script>
+                alert('Login successful! Welcome, " . $user['fullname'] . ".');
+                window.location.href = 'index.php';
+            </script>";
         } else {
             echo "Invalid password. Please try again.";
         }
+        
+        
+        
     } else {
         echo "No account found with that username.";
     }

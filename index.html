@@ -12,28 +12,28 @@
 <body>
     <header>
         <div class="logo">Music Point</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search ..." aria-label="Search bar">
-        </div>
-        <div class="cart">
-            <span aria-label="Cart total">00tk</span>
-            <i class="cart-icon" role="img" aria-label="Shopping cart">🛒</i>
-        </div>
-        <div class="user-icon">
-            <a href="login-register.html" aria-label="Login or Register"><i class="fas fa-user"></i></a>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login-register.html" aria-label="Login or Register"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
     <main>
         <section class="hero">
-            <img src="your-image.jpg" alt="Promotional banner showcasing Music Point products">
-            <a href="shop.html"><button aria-label="Shop now at Music Point">Shop Now</button></a>
+            <div class="hero-content">
+                <div class="hero-images">
+                    <img src="your-image.jpg" alt="Promotional banner showcasing Music Point products" class="hero-image">
+                    <a href="shop.html"><button aria-label="Shop now at Music Point">Shop Now</button></a>
+                    <img src="music.jpg" alt="Keyboard promotional image" class="hero-image">
+                </div>
+                <div class="hero-text">
+                    <h1>Discover the World of Music</h1>
+                    <p>Explore a wide range of instruments and accessories tailored for music enthusiasts.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -41,3 +41,4 @@
     </footer>
 </body>
 </html>
+

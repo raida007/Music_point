@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Retrieve form data
+    // Retrievie form data
     $fullname = $_POST['fullname'];
     $email = $_POST['email'];
     $username = $_POST['username'];
